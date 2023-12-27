@@ -1,5 +1,5 @@
 ---
-apiVersion: helm.toolkit.flixcd.io/v2beta2
+apiVersion: helm.toolkit.flixcd.io/v1beta2
 kind: HelmRelease
 metadata:
   name: kbot
