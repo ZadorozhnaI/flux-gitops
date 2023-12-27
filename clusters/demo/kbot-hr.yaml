@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.flixcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kbot
+  namespace: demo
+spec:
+  chart:
+    spec:
+      chart: ./bot
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: kbot
+interval: 1m0s
