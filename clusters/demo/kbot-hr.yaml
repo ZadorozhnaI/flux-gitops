@@ -1,5 +1,5 @@
 ---
-apiVersion: helm.toolkit.flixcd.io/v1beta2
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: kbot
@@ -7,9 +7,9 @@ metadata:
 spec:
   chart:
     spec:
-      chart: bot
+      chart: ./bot
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: GitRepository
         name: kbot
-interval: 1m0s
+  interval: 1m0s
